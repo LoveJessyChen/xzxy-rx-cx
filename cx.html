@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>行知学院(兰溪校区)😷校园扫码通</title>
+<style type="text/css">
+#d1 {
+    height: 1478px;
+    width: 2432 px;
+}
+#d11 {
+    position: absolute;
+    left: 387px;
+    top: 230px;
+    color: #FFFFFF;
+    width: 637px;
+    height: 163px;
+    font-size: 100px;
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+    align-content: center
+}
+#d12 {
+    position: absolute;
+    left: 99px;
+    top: 61px;
+    width: 1057px;
+    height: 187px;
+    font-size: 100px;
+    color: #FFFFFF;
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+    align-content: center
+}
+
+
+</style>
+</head>
+
+<body>
+
+	
+<div id="d1"><img src="img/cx.png" width="1278" height="2432" alt=""/></div>
+<div id="d12">
+  
+  <p id="demo1"></p>
+  
+</div>
+
+<div id="d11">
+	 <p id="demo2"></p>
+	</div>
+<script>
+window.onload = displayDate;	
+function displayDate(){
+	var date = new Date();
+	var year = date.getFullYear();
+	
+	var month = date.getMonth()+1;
+	month = ((month < 10)?"0":"") + month;
+	var day = date.getDate();
+	day = ((day < 10)?"0":"") + day;
+	
+	
+	
+	var a = new Array("日","一","二","三","四","五","六");
+	var day1 = date.getDay();
+	day1 = "星期" + a[day1];
+	
+	var currenttime = year + "年" + month + "月" + day + "日 "  + " " + day1 +" ";
+	document.getElementById("demo1").innerHTML = currenttime;
+	
+}
+var  timer = window.setInterval(displayDate,1000);
+
+</script>
+	<script>
+window.onload = displayDate;	
+function displayDate1(){
+	var date = new Date();
+	
+	
+	var hours = date.getHours();
+	hours = ((hours < 10)?"0":"") + hours;
+	
+	var minutes  = date.getMinutes();
+	minutes = ((minutes < 10)?"0":"") + minutes;
+	
+	var seconds = date.getSeconds();
+	seconds = ((seconds<10)?"0":"") + seconds;
+	
+
+	
+	var currenttime = hours + ":" + minutes + ":" + seconds;
+	document.getElementById("demo2").innerHTML = currenttime;
+	
+}
+var  timer = window.setInterval(displayDate1,1000);
+
+</script>
+	
+
+
+
+</body>
+</html>

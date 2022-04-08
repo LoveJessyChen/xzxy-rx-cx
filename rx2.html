@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>行知学院(兰溪校区)😷校园扫码通</title>
+<style type="text/css">
+#d1 {
+    height: 1478px;
+    width: 2432 px;
+}
+#d11 {
+    position: absolute;
+    left: 387px;
+    top: 230px;
+    color: #FFFFFF;
+    width: 637px;
+    height: 163px;
+    font-size: 100px;
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+    align-content: center
+		z-index:4
+}
+#d12 {
+    position: absolute;
+    left: 99px;
+    top: 61px;
+    width: 1057px;
+    height: 187px;
+    font-size: 100px;
+    color: #FFFFFF;
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+    align-content: center
+		z-index:4
+}
+#d13 {
+    position: absolute;
+    left: 3px;
+    top: 9px;
+	z-index:1
+}
+#d14 {
+    position: absolute;
+    z-index: 2;
+    left: 186px;
+    top: 342px;
+}
+#d15 {
+    position: absolute;
+    z-index: 2;
+    width: 116px;
+    left: 528px;
+    top: 1645px;
+}
+</style>
+</head>
+
+<body>
+<div id="d1"><img src="img/rx.png" width="1278" height="2432" alt=""/></div>
+
+	
+<div id="d12">
+  
+  <p id="demo1"></p>
+  
+</div>
+
+<div id="d11">
+	 <p id="demo2"></p>
+	</div>
+<div id="d14"><img src="img/rx2.png" width="1011" height="1560" alt=""/></div>
+<div id="d15"><a href="rx1.html"><img src="img/wzdl.png" width="303" height="114" alt=""/></a></div>
+	<div id="d13">
+	<img src="img/bg2.png" width="2480" height="3508" alt=""/> </div>
+<script>
+window.onload = displayDate;	
+function displayDate(){
+	var date = new Date();
+	var year = date.getFullYear();
+	
+	var month = date.getMonth()+1;
+	month = ((month < 10)?"0":"") + month;
+	var day = date.getDate();
+	day = ((day < 10)?"0":"") + day;
+	
+	
+	
+	var a = new Array("日","一","二","三","四","五","六");
+	var day1 = date.getDay();
+	day1 = "星期" + a[day1];
+	
+	var currenttime = year + "年" + month + "月" + day + "日 "  + " " + day1 +" ";
+	document.getElementById("demo1").innerHTML = currenttime;
+	
+}
+var  timer = window.setInterval(displayDate,1000);
+
+</script>
+	<script>
+window.onload = displayDate;	
+function displayDate1(){
+	var date = new Date();
+	
+	
+	var hours = date.getHours();
+	hours = ((hours < 10)?"0":"") + hours;
+	
+	var minutes  = date.getMinutes();
+	minutes = ((minutes < 10)?"0":"") + minutes;
+	
+	var seconds = date.getSeconds();
+	seconds = ((seconds<10)?"0":"") + seconds;
+	
+
+	
+	var currenttime = hours + ":" + minutes + ":" + seconds;
+	document.getElementById("demo2").innerHTML = currenttime;
+	
+}
+var  timer = window.setInterval(displayDate1,1000);
+
+</script>
+	
+
+
+
+</body>
+</html>
